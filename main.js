@@ -38,6 +38,7 @@ const doneButton = document.querySelector("#done-button")
 let selectedCards = []; 
 
 const handleStart = () => {
+  createScoreElement();
   flashcardsData.forEach((item) => {
     //* Card add section
     const cardElement = document.createElement('div');
@@ -52,6 +53,7 @@ const handleStart = () => {
       cardElement.innerText = item.meaning;
 
       selectedCards.push(item);
+      updateScore();
     });
   });
 
@@ -89,4 +91,18 @@ const handleDone = function () {
   startButton.classList.remove('hidden');
   resetButton.classList.add('hidden');
   doneButton.classList.add('hidden');
+}
+
+function createScoreElement() {
+  const scoreElement = document.createElement('div');
+  scoreElement.id = 'score-card';
+  scoreElement.className = 'text-lg font-semibold';
+  document.body.appendChild(scoreElement);
+}
+
+function updateScore() {
+  const scoreElement = document.getElementById('score-card');
+  if (scoreElement) {
+    scoreElement.innerText = `Score: ${selectedCards.length}`;
+  }
 }
