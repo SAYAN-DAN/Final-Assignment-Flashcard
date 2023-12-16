@@ -60,6 +60,7 @@ const handleStart = () => {
   startButton.classList.add('hidden');
   resetButton.classList.remove('hidden');
   doneButton.classList.remove('hidden');
+  updateScore()
 };
 
 const handleReset = () => {

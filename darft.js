@@ -43,11 +43,11 @@ Problem3()
 // // *******************************************************************************************
 // //? Problem 4
 
-// const isPalindromeResult = isPalindrome('radar');
-// const isNonPalindromeResult = isPalindrome('hello');
+const isPalindromeResult = isPalindrome('radar');
+const isNonPalindromeResult = isPalindrome('hello');
 
-// console.log(isPalindromeResult); //* Output: true
-// console.log(isNonPalindromeResult); //* Output: false
+console.log(isPalindromeResult); //* Output: true
+console.log(isNonPalindromeResult); //* Output: false
 
 // // *******************************************************************************************
 // //? Problem 5
